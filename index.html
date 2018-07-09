@@ -1,59 +1,83 @@
-<!DOCTYPE HTML>
-<!--
-	Identity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!doctype html>
 <html>
-	<head>
-		<title>Identity by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-loading">
+<head>
+    <link rel="stylesheet" type="text/css" href="build.css">
+</head>
+<body>
+<nav class="header">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <ul>
 
-				<!-- Main -->
-					<section id="main">
-						<header>
-							<span class="avatar"><img src="images/avatar.png" alt="" /></span>
-							<h1>Lars Feldeisen</h1>
-							<p>Engineer, Developer, Geek</p>
-						</header>
-				
-						<footer>
-							<ul class="icons">
-								<li><a href="mailto:lars@feldeisen.de" class="fa-envelope">Mail</a></li>
-								<li><a href="https://twitter.com/larsfeldeisen" class="fa-twitter">Twitter</a></li>
-								<li><a href="https://github.com/larsonnn" class="fa-github">GitHub</a></li>
-							</ul>
-						</footer>
-					</section>
+        <li class="nav-title"><a href=".">{Feldeisen}</a></li>
+        <!--
+       <li><a href="#">CaaS</a></li>
+       <li><a href="#">DevOp</a></li>
+       <li><a href="#">Full-Stack</a></li>
+       <li class="dropdown">
+           <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+           <div class="dropdown-content">
+               <a href="#">CaaS</a>
+               <a href="#">DevOp</a>
+               <a href="#">Full-Stack</a>
+           </div>
+       </li>
+        -->
+    </ul>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>&copy; Lars Feldeisen</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
+</nav>
 
-			</div>
+<div id="content">
 
-		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-			<script>
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-				}
-			</script>
+    <div id="gif-wrap">Powered By GIPHY</div>
 
-	</body>
+</div>
+
+<nav class="footer">
+    <ul>
+        <li class="footer-right">
+            <a href="#impressum">Impressum</a>
+        </li>
+        <li  class="footer-right">
+            <a href="#datenschutz">Datenschutz</a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/feldeisensoftware/">
+                <img src="Assets/images/facebook-square-brands.svg"/>
+            </a></li>
+        <li>
+            <a target="_blank" href="https://twitter.com/feldeisen_de">
+                <img src="Assets/images/twitter-square-brands.svg"/>
+            </a></li>
+        <li>
+            <a target="_blank" href="https://github.com/larsonnn">
+                <img src="Assets/images/github-square-brands.svg"/>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:lars@feldeisen.de">
+                <img src="Assets/images/envelope-square-solid.svg"/>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Ein wenig Javascript für die DSGVO. Danke. -->
+<script type="text/javascript">
+    window.cookieconsent_options = {
+        message: 'Diese Website nutzt Cookies, um bestm&ouml;gliche Funktionalit&auml;t bieten zu k&ouml;nnen.',
+        dismiss: 'Ok, verstanden',
+        learnMore: 'Datenschutzhinweis',
+        link: 'pages/impressum.html',
+        theme: 'light-floating'
+    };
+</script>
+<script type="text/javascript" src="build.js"></script>
+<script>
+    arouter("content", {
+        "#impressum": "pages/impressum.html",
+        "#datenschutz": "pages/datenschutz.html",
+        "#index": "pages/default.html"
+    }, true);
+</script>
+</body>
 </html>
